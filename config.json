@@ -1,0 +1,23 @@
+{
+  "http_listen_addr": ":28888",
+  "socks5_listen_addr": ":21080",
+  "api_listen_addr": ":29090",
+
+  "proxies": {
+    "us_socks5": {
+      "address": "192.168.0.250:19098"
+    },
+    "default_socks5": {
+      "address": "192.168.0.250:10808"
+    }
+  },
+
+  "default_proxy_name": "default_socks5",
+
+  "rules": [
+    {
+      "domains": ["cursor.sh", "ipinfo.io"],
+      "proxy_name": "us_socks5"
+    }
+  ]
+}
